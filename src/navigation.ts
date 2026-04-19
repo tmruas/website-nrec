@@ -12,7 +12,7 @@ export const headerData = {
     },
     {
       text: 'Research',
-      href: getBlogPermalink(),
+      href: '/research',
     },
     {
       text: 'Events',
