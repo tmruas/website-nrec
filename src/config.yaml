@@ -1,6 +1,6 @@
 site:
-  name: AstroWind
-  site: 'https://astrowind.vercel.app'
+  name: 'NREC'
+  site: 'https://nrec.vercel.app'
   base: '/'
   trailingSlash: false
 
