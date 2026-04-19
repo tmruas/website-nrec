@@ -24,13 +24,10 @@ const metadata = {
         },
         { text: 'Saber mais', href: '#missao' },
       ]}
-      image={{
-        src: '~/assets/images/logo.png',
-        alt: 'Logo do Nova Real Estate Club',
-      }}
+      /* Repara que removi a secção "image={{ ... }}" daqui! */
     >
       <Fragment slot="title">
-        Nova Real Estate Club
+        <Image src={logoImg} alt="Nova Real Estate Club Logo" class="mx-auto" />
       </Fragment>
   
       <Fragment slot="subtitle">
