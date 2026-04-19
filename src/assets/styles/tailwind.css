@@ -1,7 +1,25 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
+@layer base {
+  :root {
+    --aw-color-primary: #256a82;
+    --aw-color-secondary: #003041;
+    --aw-color-accent: #174a5c;
+    --aw-color-text-heading: #003041;
+    --aw-color-text-default: #545454;
+    --aw-color-text-muted: #7a868e;
+    --aw-color-bg-page: #ffffff;
+  }
+}
+
+@layer utilities {
+  .bg-page {
+/* ... (o resto do teu código continua igual para baixo) ... */
 @layer utilities {
   .bg-page {
     background-color: var(--aw-color-bg-page);
