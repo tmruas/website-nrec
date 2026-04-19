@@ -1,5 +1,4 @@
 ---
-import { BLOG_CONFIG } from '~/utils/config';
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
@@ -7,20 +6,16 @@ import Pagination from '~/components/blog/Pagination.astro';
 import { fetchPosts } from '~/utils/blog';
 
 export async function getStaticPaths({ paginate }) {
-  if (BLOG_CONFIG.disabled || BLOG_CONFIG.list.disabled) return [];
-  return paginate(await fetchPosts(), {
-    pageSize: BLOG_CONFIG.postsPerPage,
+  // Vamos buscar os posts diretamente sem depender de ficheiros de config externos
+  const allPosts = await fetchPosts();
+  return paginate(allPosts, {
+    pageSize: 6, 
   });
 }
 
 const { page } = Astro.props;
 const metadata = {
   title: `Research & Insights ${page.currentPage > 1 ? ` — Page ${page.currentPage}` : ''}`,
-  robots: {
-    index: BLOG_CONFIG.list.index,
-    follow: BLOG_CONFIG.list.follow,
-  },
-  noindex: BLOG_CONFIG.list.index === false,
 };
 ---
 
