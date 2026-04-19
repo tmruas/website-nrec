@@ -16,41 +16,40 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <section class="relative flex flex-col items-center justify-center pt-16 pb-16 bg-white overflow-hidden">
+    
+    <div class="absolute top-0 inset-x-0 h-[65%] md:h-[70%] -z-10">
+      <Image 
+        src={bgImg} 
+        alt="Immersive background"
+        class="object-cover object-top w-full h-full opacity-100" 
+      />
+      <div class="absolute inset-0 bg-white/20"></div>
+      <div class="absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t from-white via-white to-transparent"></div>
+    </div>
+
+    <div class="relative z-10 text-center px-4 max-w-3xl mx-auto mt-4">
       
-      <div class="absolute top-0 inset-x-0 h-[65%] md:h-[70%] -z-10">
-        <Image 
-          src={bgImg} 
-          alt="Immersive background"
-          /* O "object-top" prende a imagem ao teto para não mostrar partes indesejadas do fundo */
-          class="object-cover object-top w-full h-full opacity-100" 
-        />
-        <div class="absolute inset-0 bg-white/20"></div>
-        <div class="absolute inset-x-0 bottom-0 h-32 md:h-48 bg-gradient-to-t from-white via-white to-transparent"></div>
+      <Image 
+        src={logoImg} 
+        alt="Nova Real Estate Club Logo" 
+        class="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md mb-20 md:mb-32" 
+      />
+      
+      <div class="mb-8">
+        <p class="text-xl md:text-2xl font-bold text-slate-900 mb-2">
+          Where talent meets the real estate market.
+        </p>
+        <p class="text-base md:text-lg text-slate-800 font-medium">
+          We create learning and career bridges between Nova SBE students and the real estate industry.
+        </p>
       </div>
-  
-      <div class="relative z-10 text-center px-4 max-w-3xl mx-auto mt-4">
-        
-        <Image 
-          src={logoImg} 
-          alt="Nova Real Estate Club Logo" 
-          class="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md mb-20 md:mb-32" 
-        />
-        
-        <div class="mb-8">
-          <p class="text-xl md:text-2xl font-bold text-slate-900 mb-2">
-            Where talent meets the real estate market.
-          </p>
-          <p class="text-base md:text-lg text-slate-800 font-medium">
-            We create learning and career bridges between Nova SBE students and the real estate industry.
-          </p>
-        </div>
-  
-        <div class="flex flex-col sm:flex-row justify-center gap-4">
-          <a href="/parcerias" class="btn btn-primary w-full sm:w-auto shadow-md">Partnerships</a>
-          <a href="#missao" class="btn w-full sm:w-auto bg-white hover:bg-gray-50 text-slate-900 shadow-sm border border-gray-200">Learn More</a>
-        </div>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-4">
+        <a href="/parcerias" class="btn btn-primary w-full sm:w-auto shadow-md">Partnerships</a>
+        <a href="#missao" class="btn w-full sm:w-auto bg-white hover:bg-gray-50 text-slate-900 shadow-sm border border-gray-200">Learn More</a>
       </div>
-    </section>
+    </div>
+  </section>
 
   <Features2
     id="missao"
