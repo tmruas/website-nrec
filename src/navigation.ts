@@ -3,11 +3,11 @@ import { getPermalink, getAsset, getBlogPermalink } from './utils/permalinks';
 export const headerData = {
   links: [
     {
-      text: 'O Clube',
+      text: 'The Club',
       href: '/#missao',
     },
     {
-      text: 'Serviços',
+      text: 'Services',
       href: '/#servicos',
     },
     {
@@ -15,30 +15,30 @@ export const headerData = {
       href: getBlogPermalink(),
     },
     {
-      text: 'Eventos',
+      text: 'Events',
       href: '/#eventos',
     },
     {
-      text: 'Recrutamento',
+      text: 'Recruitment',
       href: '/#recrutamento',
     },
   ],
   actions: [
-    { text: 'Parcerias', href: '/parcerias', variant: 'primary' }
+    { text: 'Partnerships', href: '/parcerias', variant: 'primary' }
   ],
 };
 
 export const footerData = {
   links: [],
   secondaryLinks: [
-    { text: 'Termos e Condições', href: getPermalink('/terms') },
-    { text: 'Política de Privacidade', href: getPermalink('/privacy') },
+    { text: 'Terms & Conditions', href: getPermalink('/terms') },
+    { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
     { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/nrec_novasbe' },
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/company/nova-real-estate-club' },
   ],
   footNote: `
-    © ${new Date().getFullYear()} Nova Real Estate Club · Carcavelos, Portugal. Todos os direitos reservados.
+    © ${new Date().getFullYear()} Nova Real Estate Club · Carcavelos, Portugal. All rights reserved.
   `,
 };
