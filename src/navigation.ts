@@ -7,12 +7,16 @@ export const headerData = {
       href: '/#missao',
     },
     {
-      text: 'Consultoria',
-      href: '/#consultoria',
+      text: 'Serviços',
+      href: '/#servicos',
     },
     {
       text: 'Research',
       href: getBlogPermalink(),
+    },
+    {
+      text: 'Eventos',
+      href: '/#eventos',
     },
     {
       text: 'Recrutamento',
