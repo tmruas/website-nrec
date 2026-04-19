@@ -18,37 +18,42 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
-    actions={[
-      { variant: 'primary', text: 'Partnerships', href: '/parcerias' },
-      { text: 'Learn More', href: '#missao' },
-    ]}
-  >
-    <Fragment slot="bg">
-      <div class="absolute inset-0 bg-white dark:bg-slate-900">
-        <Image 
-          src={bgImg} 
-          alt="Immersive background"
-          class="absolute inset-0 object-cover w-full h-full opacity-30" 
-        />
-      </div>
-    </Fragment>
-
-    <Fragment slot="title">
-      <Image 
-        src={logoImg} 
-        alt="Nova Real Estate Club Logo" 
-        class="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md mb-4" 
-      />
-    </Fragment>
-
-    <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold text-black dark:text-white">Where talent meets the real estate market.</span> 
-      </span>
-      <br />
-      <span class="text-black dark:text-white">We create learning and career bridges between Nova SBE students and the real estate industry.</span>
-    </Fragment>
-  </Hero>
+      actions={[
+        { variant: 'primary', text: 'Partnerships', href: '/parcerias' },
+        { text: 'Learn More', href: '#missao' },
+      ]}
+    >
+      <Fragment slot="bg">
+        <div class="absolute inset-0 bg-white dark:bg-slate-900 overflow-hidden">
+          <Image 
+            src={bgImg} 
+            alt="Immersive background"
+            class="absolute inset-0 object-cover w-full h-full opacity-30" 
+          />
+          <div class="absolute inset-x-0 bottom-0 h-32 bg-gradient-to-t from-white to-transparent dark:from-slate-900"></div>
+        </div>
+      </Fragment>
+  
+      <Fragment slot="title">
+        <div class="min-h-[50vh] flex flex-col justify-end pb-6 md:pb-10">
+          <Image 
+            src={logoImg} 
+            alt="Nova Real Estate Club Logo" 
+            class="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md" 
+          />
+        </div>
+      </Fragment>
+  
+      <Fragment slot="subtitle">
+        <div class="max-w-3xl mx-auto pb-12 md:pb-24">
+          <span class="hidden sm:inline">
+            <span class="font-semibold text-black dark:text-white">Where talent meets the real estate market.</span> 
+          </span>
+          <br />
+          <span class="text-black dark:text-white">We create learning and career bridges between Nova SBE students and the real estate industry.</span>
+        </div>
+      </Fragment>
+    </Hero>
 
   <Features2
     id="missao"
