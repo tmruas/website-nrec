@@ -1,0 +1,27 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import BlogList from '~/components/blog/List.astro';
+import Headline from '~/components/blog/Headline.astro';
+import { fetchPosts } from '~/utils/blog';
+
+const posts = await fetchPosts();
+const metadata = {
+  title: 'Research & Insights — NREC',
+};
+---
+
+<Layout metadata={metadata}>
+  <section class="px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+    <Headline
+      subtitle="Explore our latest market analysis, real estate trends, and club updates."
+    >
+      Research & Insights
+    </Headline>
+    
+    {posts.length > 0 ? (
+      <BlogList posts={posts} />
+    ) : (
+      <p class="text-center text-muted">New reports coming soon. Stay tuned!</p>
+    )}
+  </section>
+</Layout>
