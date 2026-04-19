@@ -1,5 +1,7 @@
 import { getPermalink, getAsset } from './utils/permalinks';
 
+import { getPermalink, getAsset, getBlogPermalink } from './utils/permalinks';
+
 export const headerData = {
   links: [
     {
@@ -7,8 +9,12 @@ export const headerData = {
       href: '/#missao',
     },
     {
-      text: 'Departamentos',
-      href: '/#structure',
+      text: 'Consultoria',
+      href: '/#consultoria', // Mais tarde criamos esta secção/página
+    },
+    {
+      text: 'Research',
+      href: getBlogPermalink(), // Vai ligar ao vosso "Blog" de artigos
     },
     {
       text: 'Recrutamento',
@@ -19,6 +25,9 @@ export const headerData = {
     { text: 'Parcerias', href: '/parcerias', variant: 'primary' }
   ],
 };
+
+export const footerData = {
+/* ... (deixa o resto do footerData que puseste há bocado exatamente igual) ... */
 
 export const footerData = {
   links: [],
