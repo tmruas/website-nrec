@@ -2,6 +2,7 @@
 import Layout from '~/layouts/PageLayout.astro';
 import BlogList from '~/components/blog/List.astro';
 import Headline from '~/components/blog/Headline.astro';
+import BlogHighlightedPosts from '~/components/widgets/BlogHighlightedPosts.astro';
 import { fetchPosts } from '~/utils/blog';
 
 const posts = await fetchPosts();
@@ -11,11 +12,16 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
-  <section class="px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-4xl">
+  <BlogHighlightedPosts
+    title="Premium Insights"
+    information="Our research combines analytical rigor with real estate market trends. Discover the latest reports produced by NREC's top talent."
+  />
+
+  <section class="px-6 py-12 sm:py-16 lg:py-20 mx-auto max-w-7xl">
     <Headline
-      subtitle="Explore our latest market analysis, real estate trends, and club updates."
+      subtitle="Explore our complete archive of market analysis, real estate trends, and opinion articles."
     >
-      Research & Insights
+      Library & Reports
     </Headline>
     
     {posts.length > 0 ? (
