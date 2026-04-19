@@ -1,6 +1,5 @@
 ---
 import Layout from '~/layouts/PageLayout.astro';
-
 import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
@@ -8,6 +7,8 @@ import Steps from '~/components/widgets/Steps.astro';
 
 import { Image } from 'astro:assets';
 import logoImg from '~/assets/images/logo.png';
+// --- EDIT 1: Add this line to import your new background image ---
+import bgImg from '~/assets/images/immersive-bg.jpg'; 
 
 const metadata = {
   title: 'NREC - Nova Real Estate Club',
@@ -16,153 +17,42 @@ const metadata = {
 ---
 
 <Layout metadata={metadata}>
+  {/* --- EDIT 2: Update the <Hero> tag below --- */}
   <Hero
     actions={[
-      {
-        variant: 'primary',
-        text: 'Partnerships',
-        href: '/parcerias',
-      },
+      { variant: 'primary', text: 'Partnerships', href: '/parcerias' },
       { text: 'Learn More', href: '#missao' },
     ]}
+    {/* --- This makes the section fill the whole screen --- */}
+    class="min-h-screen flex items-center justify-center relative"
   >
+    {/* --- This inserts the background image dynamically --- */}
+    <Image 
+      src={bgImg} 
+      alt="Immersive background"
+      loading="eager"
+      {/* --- This styles the background to be full-screen, covers everything, and adds an overlay --- */}
+      class="absolute inset-0 object-cover w-full h-full -z-10 opacity-60" 
+    />
+
     <Fragment slot="title">
-      <Image src={logoImg} alt="Nova Real Estate Club Logo" class="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md mb-4" />
+      <Image 
+        src={logoImg} 
+        alt="Nova Real Estate Club Logo" 
+        {/* --- Centralizes and ensures text and logo are above the background --- */}
+        class="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md mb-4 relative z-10" 
+      />
     </Fragment>
 
     <Fragment slot="subtitle">
-      <span class="hidden sm:inline">
-        <span class="font-semibold">Where talent meets the real estate market.</span> 
-      </span>
-      <br />
-      We create learning and career bridges between Nova SBE students and the real estate industry.
+      <div class="relative z-10">
+        <span class="hidden sm:inline">
+          <span class="font-semibold text-black dark:text-white">Where talent meets the real estate market.</span> 
+        </span>
+        <br />
+        <span class="text-black dark:text-white">We create learning and career bridges between Nova SBE students and the real estate industry.</span>
+      </div>
     </Fragment>
   </Hero>
 
-  <Features2
-    id="missao"
-    title="Our Mission, Values & Goals"
-    subtitle="To become the go-to hub at Nova SBE for real estate knowledge and talent."
-    items={[
-      {
-        title: 'Our Mission',
-        description: 'We create learning and career bridges between Nova SBE students and the real estate industry.',
-        icon: 'tabler:trending-up',
-      },
-      {
-        title: 'Our Goals',
-        description: 'Offer hands-on experiences, connect with opportunities, systematize talent recruitment, and launch innovative initiatives.',
-        icon: 'tabler:list-check',
-      },
-      {
-        title: 'What We Do',
-        description: 'Consulting Services • Events • Research • Casanova',
-        icon: 'tabler:briefcase',
-      },
-    ]}
-  />
-
-  <Features2
-    id="servicos"
-    title="Our Services"
-    subtitle="Premium solutions developed by Nova SBE talent to support partners and clients."
-    items={[
-      {
-        title: 'Strategic Consulting',
-        description: 'Market analysis, feasibility studies, and strategic planning for real estate projects.',
-        icon: 'tabler:chart-bar',
-      },
-      {
-        title: 'Market Research',
-        description: 'Detailed reports on market trends, demographic data, and investment opportunities.',
-        icon: 'tabler:search',
-      },
-      {
-        title: 'Asset Valuation',
-        description: 'Financial modeling and rigorous valuation to support real estate decision-making.',
-        icon: 'tabler:building-bank',
-      },
-    ]}
-  />
-
-  <Features
-    id="eventos"
-    title="Events & Initiatives"
-    tagline="Club Agenda"
-    subtitle="Keep track of all the lectures, workshops, and networking sessions organized by NREC."
-    items={[
-      {
-        title: 'NREC Summit',
-        description: 'Our flagship annual event, bringing together key real estate players and Nova SBE students.',
-        icon: 'tabler:calendar-star',
-      },
-      {
-        title: 'Practical Workshops',
-        description: 'Regular sessions focused on financial modeling, real estate valuation, and soft skills.',
-        icon: 'tabler:chalkboard',
-      },
-      {
-        title: 'Networking Sessions',
-        description: 'Exclusive moments for members to interact directly with top industry professionals.',
-        icon: 'tabler:users-group',
-      },
-    ]}
-  />
-
-  <Features
-    id="structure"
-    tagline="Our Team"
-    title="Internal Structure"
-    subtitle="Led by our President and Heads, the club is powered by a total of 27 dedicated members across four key departments."
-    items={[
-      {
-        title: 'Events & Partnerships',
-        description: '3 Members focused on building synergies, networking, and organizing impactful real estate events.',
-        icon: 'tabler:calendar-event',
-      },
-      {
-        title: 'Operations',
-        description: '15 Members ensuring the smooth execution of our initiatives, internal organization, and club management.',
-        icon: 'tabler:settings',
-      },
-      {
-        title: 'Marketing',
-        description: '3 Members managing our brand presence, communication, and digital outreach to the Nova SBE community.',
-        icon: 'tabler:speakerphone',
-      },
-      {
-        title: 'Human Resources',
-        description: '2 Members dedicated to talent recruitment, member growth, and internal feedback.',
-        icon: 'tabler:users',
-      },
-    ]}
-  />
-
-  <Steps
-    id="recrutamento"
-    title="Join the Club: The Recruitment Process"
-    tagline="Careers & Talent"
-    isReversed={true}
-    items={[
-      {
-        title: '01. Fill in the Forms',
-        description: 'The timeline and clear criteria are well-communicated across our social media channels. Keep an eye out for our application periods!',
-        icon: 'tabler:clipboard-text',
-      },
-      {
-        title: '02. Interviews',
-        description: 'Our interview scripts are tailored to each department. HR tasks are clear and structured, with templates ensuring consistent recruitment each semester.',
-        icon: 'tabler:users',
-      },
-      {
-        title: '03. Results & Feedback',
-        description: 'We value transparency and every candidate\'s effort. Feedback to the candidates is always provided when asked.',
-        icon: 'tabler:mail',
-      },
-    ]}
-    image={{
-      src: 'https://images.unsplash.com/photo-1521737604893-d14cc237f11d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2084&q=80',
-      alt: 'Students working together',
-    }}
-  />
-</Layout>
+  </Layout>
