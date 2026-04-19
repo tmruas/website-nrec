@@ -5,6 +5,7 @@ import Hero from '~/components/widgets/Hero.astro';
 import Features from '~/components/widgets/Features.astro';
 import Features2 from '~/components/widgets/Features2.astro';
 import Steps from '~/components/widgets/Steps.astro';
+
 import { Image } from 'astro:assets';
 import logoImg from '~/assets/images/logo.png';
 
@@ -16,49 +17,97 @@ const metadata = {
 
 <Layout metadata={metadata}>
   <Hero
-      actions={[
-        {
-          variant: 'primary',
-          text: 'Ver Parcerias',
-          href: '/parcerias',
-        },
-        { text: 'Saber mais', href: '#missao' },
-      ]}
-    >
-      <Fragment slot="title">
-        <Image src={logoImg} alt="Nova Real Estate Club Logo" class="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md mb-4" />
-      </Fragment>
-  
-      <Fragment slot="subtitle">
-        <span class="hidden sm:inline">
-          <span class="font-semibold">Where talent meets the real estate market.</span> 
-        </span>
-        <br />
-        We create learning and career bridges between Nova SBE students and the real estate industry.
-      </Fragment>
-    </Hero>
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Ver Parcerias',
+        href: '/parcerias',
+      },
+      { text: 'Saber mais', href: '#missao' },
+    ]}
+  >
+    <Fragment slot="title">
+      <Image src={logoImg} alt="Nova Real Estate Club Logo" class="mx-auto w-full max-w-xs sm:max-w-sm md:max-w-md mb-4" />
+    </Fragment>
+
+    <Fragment slot="subtitle">
+      <span class="hidden sm:inline">
+        <span class="font-semibold">Where talent meets the real estate market.</span> 
+      </span>
+      <br />
+      We create learning and career bridges between Nova SBE students and the real estate industry.
+    </Fragment>
+  </Hero>
 
   <Features2
-      title="Our Mission, Values & Goals"
-      subtitle="To become the go-to hub at Nova SBE for real estate knowledge and talent."
-      items={[
-        {
-          title: 'Our Mission',
-          description: 'We create learning and career bridges between Nova SBE students and the real estate industry.',
-          icon: 'tabler:trending-up',
-        },
-        {
-          title: 'Our Goals',
-          description: 'Offer hands-on experiences, connect with opportunities, systematize talent recruitment, and launch innovative initiatives.',
-          icon: 'tabler:list-check',
-        },
-        {
-          title: 'What We Do',
-          description: 'Consulting Services • Events • Research • Casanova',
-          icon: 'tabler:briefcase',
-        },
-      ]}
-    />
+    id="missao"
+    title="Our Mission, Values & Goals"
+    subtitle="To become the go-to hub at Nova SBE for real estate knowledge and talent."
+    items={[
+      {
+        title: 'Our Mission',
+        description: 'We create learning and career bridges between Nova SBE students and the real estate industry.',
+        icon: 'tabler:trending-up',
+      },
+      {
+        title: 'Our Goals',
+        description: 'Offer hands-on experiences, connect with opportunities, systematize talent recruitment, and launch innovative initiatives.',
+        icon: 'tabler:list-check',
+      },
+      {
+        title: 'What We Do',
+        description: 'Consulting Services • Events • Research • Casanova',
+        icon: 'tabler:briefcase',
+      },
+    ]}
+  />
+
+  <Features2
+    id="servicos"
+    title="Os Nossos Serviços"
+    subtitle="Soluções de excelência desenvolvidas pelo talento da Nova SBE para apoiar parceiros e clientes."
+    items={[
+      {
+        title: 'Consultoria Estratégica',
+        description: 'Análise de mercado, estudos de viabilidade e planeamento estratégico para projetos imobiliários.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Market Research',
+        description: 'Relatórios detalhados sobre tendências, dados demográficos e oportunidades de investimento.',
+        icon: 'tabler:search',
+      },
+      {
+        title: 'Avaliação de Ativos',
+        description: 'Modelização financeira e avaliação rigorosa para apoiar a tomada de decisão em real estate.',
+        icon: 'tabler:building-bank',
+      },
+    ]}
+  />
+
+  <Features
+    id="eventos"
+    title="Eventos & Dinâmicas"
+    tagline="Agenda do Clube"
+    subtitle="Fica a par de todas as palestras, workshops e sessões de networking organizadas pelo NREC."
+    items={[
+      {
+        title: 'NREC Summit',
+        description: 'O nosso evento anual de referência, reunindo os principais players do mercado imobiliário e estudantes da Nova SBE.',
+        icon: 'tabler:calendar-star',
+      },
+      {
+        title: 'Workshops Práticos',
+        description: 'Sessões regulares focadas em modelização financeira, avaliação de imóveis e soft skills.',
+        icon: 'tabler:chalkboard',
+      },
+      {
+        title: 'Networking Sessions',
+        description: 'Momentos exclusivos para os membros interagirem diretamente com profissionais de topo do setor.',
+        icon: 'tabler:users-group',
+      },
+    ]}
+  />
 
   <Features
     id="structure"
@@ -90,6 +139,7 @@ const metadata = {
   />
 
   <Steps
+    id="recrutamento"
     title="Join the Club: The Recruitment Process"
     tagline="Careers & Talent"
     isReversed={true}
