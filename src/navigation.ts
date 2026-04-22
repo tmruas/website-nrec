@@ -38,7 +38,7 @@ export const footerData = {
     { 
       ariaLabel: 'Instagram', 
       icon: 'tabler:brand-instagram', 
-      href: 'https://www.instagram.com/nova_realestateclub' /* <- Confirma se o @ do Instagram é este! */
+      href: 'https://www.instagram.com/nova_real_estate_club' /* <- Confirma se o @ do Instagram é este! */
     },
     { 
       ariaLabel: 'LinkedIn', 
