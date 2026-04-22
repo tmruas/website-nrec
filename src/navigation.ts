@@ -8,7 +8,7 @@ export const headerData = {
     },
     {
       text: 'Services',
-      href: '/#servicos',
+      href: '/services',
     },
     {
       text: 'Research',
@@ -16,7 +16,7 @@ export const headerData = {
     },
     {
       text: 'Events',
-      href: '/#eventos',
+      href: '/events',
     },
     {
       text: 'Recruitment',
