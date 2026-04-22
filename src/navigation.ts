@@ -20,7 +20,7 @@ export const headerData = {
     },
     {
       text: 'Recruitment',
-      href: '/#recrutamento',
+      href: '/#recruitment',
     },
   ],
   actions: [
