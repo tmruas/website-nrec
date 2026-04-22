@@ -35,8 +35,16 @@ export const footerData = {
     { text: 'Privacy Policy', href: getPermalink('/privacy') },
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://instagram.com/nrec_novasbe' },
-    { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://linkedin.com/company/nova-real-estate-club' },
+    { 
+      ariaLabel: 'Instagram', 
+      icon: 'tabler:brand-instagram', 
+      href: 'https://www.instagram.com/nova_realestateclub' /* <- Confirma se o @ do Instagram é este! */
+    },
+    { 
+      ariaLabel: 'LinkedIn', 
+      icon: 'tabler:brand-linkedin', 
+      href: 'https://www.linkedin.com/company/nrec-nova-real-estate-club/posts/?feedView=all' 
+    },
   ],
   footNote: `
     © ${new Date().getFullYear()} Nova Real Estate Club · Carcavelos, Portugal. All rights reserved.
