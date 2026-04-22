@@ -1,0 +1,56 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Partnerships — NREC',
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <HeroText
+    tagline="Corporate Partners"
+    title="Partner with NREC"
+    subtitle="Connect your company with the brightest real estate talent at Nova SBE. We build bridges between academia and industry leaders."
+  />
+
+  <Features2
+    title="Why partner with us?"
+    subtitle="A strategic alliance with NREC offers your company direct access to a pool of highly motivated and skilled students."
+    columns={3}
+    items={[
+      {
+        title: 'Talent Acquisition',
+        description: 'Gain early access to top-tier Nova SBE students passionate about real estate. Streamline your recruitment process by connecting directly with our members.',
+        icon: 'tabler:users-group',
+      },
+      {
+        title: 'Brand Visibility',
+        description: 'Elevate your corporate brand on campus. Sponsor our events, workshops, and research reports to position your company as an industry leader among students.',
+        icon: 'tabler:building-skyscraper',
+      },
+      {
+        title: 'Strategic Insights',
+        description: 'Collaborate with our Research and Consulting departments. Challenge our students with real-world business cases and benefit from fresh, analytical perspectives.',
+        icon: 'tabler:bulb',
+      },
+    ]}
+  />
+
+  <CallToAction
+    title="Let's build the future together."
+    subtitle="Reach out to our Partnerships team to discover how we can tailor a collaboration that meets your strategic goals."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Contact Us',
+        href: 'mailto:partnerships@nrec.pt', 
+        icon: 'tabler:mail',
+      },
+    ]}
+  />
+
+</Layout>
