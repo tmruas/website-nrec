@@ -1,0 +1,37 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features from '~/components/widgets/Features.astro';
+
+const metadata = { title: 'Events — NREC' };
+---
+
+<Layout metadata={metadata}>
+  <HeroText
+    tagline="Club Agenda"
+    title="Events & Initiatives"
+    subtitle="Connecting students with industry leaders through summits, workshops, and networking sessions."
+  />
+
+  <Features
+    id="event-list"
+    title="Upcoming & Signature Events"
+    items={[
+      {
+        title: 'NREC Summit',
+        description: 'Our flagship annual event, bringing together key real estate players and students.',
+        icon: 'tabler:calendar-star',
+      },
+      {
+        title: 'Practical Workshops',
+        description: 'Sessions focused on financial modeling, valuation, and technical skills.',
+        icon: 'tabler:chalkboard',
+      },
+      {
+        title: 'Networking Sessions',
+        description: 'Exclusive moments for members to interact directly with top industry professionals.',
+        icon: 'tabler:users-group',
+      },
+    ]}
+  />
+</Layout>
