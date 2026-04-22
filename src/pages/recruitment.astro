@@ -1,0 +1,87 @@
+---
+import Layout from '~/layouts/PageLayout.astro';
+import HeroText from '~/components/widgets/HeroText.astro';
+import Features2 from '~/components/widgets/Features2.astro';
+import FAQs from '~/components/widgets/FAQs.astro';
+import CallToAction from '~/components/widgets/CallToAction.astro';
+
+const metadata = {
+  title: 'Recruitment — NREC',
+};
+---
+
+<Layout metadata={metadata}>
+  
+  <HeroText
+    tagline="Careers & Talent"
+    title="Join the NREC Team"
+    subtitle="Step into the real estate industry. Develop practical skills, build a powerful network, and work on high-impact projects alongside top Nova SBE students."
+  />
+
+  <Features2
+    title="Where do you fit in?"
+    subtitle="We recruit across four specialized departments. Find the one that matches your skills and ambitions."
+    columns={2}
+    items={[
+      {
+        title: 'Operations & Consulting',
+        description: 'Work on real-world consulting projects, market research, and financial valuation. Ideal for analytical and strategic thinkers.',
+        icon: 'tabler:chart-bar',
+      },
+      {
+        title: 'Events & Partnerships',
+        description: 'Be the bridge between NREC and the corporate world. Organize our annual Summit, workshops, and manage corporate relations.',
+        icon: 'tabler:calendar-event',
+      },
+      {
+        title: 'Marketing & Comms',
+        description: 'Manage our brand, social media presence, and content creation. Perfect for creative minds with an eye for design and strategy.',
+        icon: 'tabler:speakerphone',
+      },
+      {
+        title: 'Human Resources',
+        description: 'Shape the culture of our club. Manage recruitment cycles, member development, and internal team-building initiatives.',
+        icon: 'tabler:users',
+      },
+    ]}
+  />
+
+  <FAQs
+    title="Frequently Asked Questions"
+    subtitle="Everything you need to know about our recruitment process."
+    tagline="FAQs"
+    classes={{ container: 'max-w-6xl' }}
+    items={[
+      {
+        title: 'Who can apply to NREC?',
+        description: "Any active student at Nova SBE, regardless of their degree (Bachelors or Masters) or year of study, is welcome to apply. We value passion for real estate above all.",
+      },
+      {
+        title: 'Do I need prior real estate experience?',
+        description: "Not at all! NREC is a place to learn. While existing knowledge is a plus, we are looking for motivation, analytical skills, and a willingness to work hard.",
+      },
+      {
+        title: 'When does recruitment take place?',
+        description: "We typically open our recruitment cycles twice a year, at the beginning of the Fall and Spring semesters. Keep an eye on our social media for exact dates.",
+      },
+      {
+        title: 'What is the expected time commitment?',
+        description: "Members usually dedicate around 4 to 6 hours per week to club activities, including department meetings, project work, and club-wide events.",
+      },
+    ]}
+  />
+
+  <CallToAction
+    title="Ready to take the next step?"
+    subtitle="Applications are currently closed, but you can follow us to be notified when the next cycle opens."
+    actions={[
+      {
+        variant: 'primary',
+        text: 'Apply Now',
+        href: '#', 
+        icon: 'tabler:clipboard-check',
+      },
+    ]}
+  />
+
+</Layout>
