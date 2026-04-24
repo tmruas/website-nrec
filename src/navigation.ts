@@ -1,3 +1,37 @@
+import { getPermalink, getAsset, getBlogPermalink } from './utils/permalinks';
+
+export const headerData = {
+  links: [
+    {
+      text: 'The Club',
+      href: '/#missao',
+    },
+    { 
+      text: 'Team', 
+      href: '/team' 
+    },
+    {
+      text: 'Services',
+      href: '/services',
+    },
+    {
+      text: 'Research',
+      href: '/research',
+    },
+    {
+      text: 'Events',
+      href: '/events',
+    },
+    {
+      text: 'Recruitment',
+      href: '/recruitment',
+    },
+  ],
+  actions: [
+    { text: 'Partnerships', href: '/parcerias', variant: 'primary' }
+  ],
+};
+
 export const footerData = {
   links: [
     {
