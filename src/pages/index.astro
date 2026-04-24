@@ -76,5 +76,27 @@ const metadata = {
         { title: 'Human Resources', description: 'Dedicated to talent recruitment, member growth, and club culture.', icon: 'tabler:users' }
       ]}
     />
-
+  <style is:global>
+      /* 1. Faz o menu flutuar em cima da imagem */
+      #header {
+        position: absolute !important;
+        width: 100%;
+      }
+      
+      /* 2. Remove o fundo branco inicial */
+      #header:not(.is-scrolled) > div.absolute.inset-0 {
+        opacity: 0 !important;
+      }
+      
+      /* 3. Quando faz scroll, fixa o menu no topo da janela */
+      #header.is-scrolled {
+        position: fixed !important;
+      }
+      
+      /* 4. Traz o fundo branco de volta suavemente durante o scroll */
+      #header.is-scrolled > div.absolute.inset-0 {
+        opacity: 1 !important;
+        transition: opacity 0.3s ease-in-out;
+    }
+  </style>
 </Layout>
