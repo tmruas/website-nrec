@@ -18,7 +18,7 @@ tags:
 ## Download the Full Report
 Podes ler a análise detalhada no documento oficial do NREC:
 
-[📥 Download Full Market Insight (PDF)](/reports/NREC_Swiss_RE_Market.pdf)
+[📥 Download Full Market Insight (PDF)](/NREC_Swiss_RE_Market.pdf)
 
 ## Yield Context: Rational Pricing
 
