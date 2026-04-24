@@ -76,31 +76,4 @@ const metadata = {
         { title: 'Human Resources', description: 'Dedicated to talent recruitment, member growth, and club culture.', icon: 'tabler:users' }
       ]}
     />
-  <style is:global>
-      /* 1. Prende o menu sempre no topo */
-      #header {
-        position: fixed !important;
-        top: 0;
-        width: 100%;
-        background-color: transparent !important;
-        transition: background-color 0.4s ease, box-shadow 0.4s ease !important;
-      }
-  
-      /* 2. Desativa o bloco de fundo padrão do AstroWind para assumirmos o controlo */
-      #header > div.absolute.inset-0 {
-        display: none !important;
-      }
-  
-      /* 3. Fundo branco quando se faz scroll (ativa-se automaticamente) */
-      #header.is-scrolled {
-        background-color: white !important;
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05) !important; /* Adiciona uma sombra elegante */
-      }
-  
-      /* 4. Suporte a Dark Mode (caso o vosso site o use) */
-      html.dark #header.is-scrolled {
-        background-color: #0f172a !important; /* Fundo escuro em vez de branco */
-        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.5) !important;
-      }
-    </style>
 </Layout>
