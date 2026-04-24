@@ -29,7 +29,7 @@ export const footerData = {
     /* Deixamos vazio para manter limpo de falsas Políticas de Privacidade */
   ],
   socialLinks: [
-    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/nova_realestateclub' },
+    { ariaLabel: 'Instagram', icon: 'tabler:brand-instagram', href: 'https://www.instagram.com/nova_real_estate_club' },
     { ariaLabel: 'LinkedIn', icon: 'tabler:brand-linkedin', href: 'https://www.linkedin.com/company/nrec-nova-real-estate-club/posts/?feedView=all' },
   ],
   footNote: `
