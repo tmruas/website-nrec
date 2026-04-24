@@ -2,7 +2,7 @@
 publishDate: 2026-04-01T00:00:00Z
 title: "Why the Swiss Real Estate Market Is a Safe Haven for Investors"
 excerpt: "Despite fears of a bubble, the Swiss real estate market remains heavily insulated by strict mortgage regulations, genuine supply scarcity, and historic economic stability."
-image: "~/assets/images/suica.jpg"
+image: "~/assets/images/suica.jpeg"
 category: "Market Insights"
 author: "Benjamin Kosteribäder"
 ---
