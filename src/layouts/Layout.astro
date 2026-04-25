@@ -44,5 +44,10 @@ const { language, textDirection } = I18N;
     <slot />
 
     <BasicScripts />
+  <script is:inline>
+        // Opção Nuclear: Força o site a ser sempre Light, independentemente do telemóvel do utilizador
+        document.documentElement.classList.remove('dark');
+        localStorage.setItem('theme', 'light');
+      </script>
   </body>
 </html>
