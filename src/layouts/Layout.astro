@@ -49,5 +49,16 @@ const { language, textDirection } = I18N;
         document.documentElement.classList.remove('dark');
         localStorage.setItem('theme', 'light');
       </script>
+  <style is:global>
+    /* Força os textos e secções a aparecerem instantaneamente, anulando o efeito lento de fade-in */
+    [class*="animate-fade"], .intersect-once, .intersect {
+      animation-duration: 0s !important;
+      animation-delay: 0s !important;
+      opacity: 1 !important;
+      transform: none !important;
+      transition: none !important;
+    }
+    </style>
   </body>
+
 </html>
