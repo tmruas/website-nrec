@@ -51,7 +51,7 @@ export const footerData = {
       links: [
         { text: 'Nova SBE Campus', href: '#' },
         { text: 'Carcavelos, Portugal', href: '#' },
-        { text: 'Email Us', href: 'mailto:geral@nrec.pt' }, /* Podes alterar este email para o vosso oficial */
+        { text: 'Email Us', href: 'realestate.club@novasbe.pt' }, /* Podes alterar este email para o vosso oficial */
       ],
     },
   ],
