@@ -6,10 +6,6 @@ export const headerData = {
       text: 'The Club',
       href: '/#missao',
     },
-    { 
-      text: 'Team', 
-      href: '/team' 
-    },
     {
       text: 'Services',
       href: '/services',
