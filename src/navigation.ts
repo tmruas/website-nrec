@@ -34,7 +34,6 @@ export const footerData = {
       title: 'The Club',
       links: [
         { text: 'About Us', href: '/' },
-        { text: 'Meet the Team', href: '/team' },
         { text: 'Services & Partnerships', href: '/services' },
       ],
     },
