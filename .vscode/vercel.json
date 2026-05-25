@@ -1,0 +1,15 @@
+{
+  "redirects": [
+    {
+      "source": "/(.*)",
+      "has": [
+        {
+          "type": "host",
+          "value": "nrec.vercel.app"
+        }
+      ],
+      "destination": "https://nrec.pt/$1",
+      "permanent": true
+    }
+  ]
+}
