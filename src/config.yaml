@@ -1,6 +1,6 @@
 site:
   name: 'NREC'
-  site: 'https://nrec.vercel.app'
+  site: 'https://nrec.pt'
   base: '/'
   trailingSlash: false
 
